@@ -146,13 +146,17 @@
             </div>
         </div>
     </div>
+
     <div class="w3-content w3-padding-64" id="docentes">
         <h2 class="w3-text-white">Docentes</h2>
         <hr style="width:200px" class="w3-opacity">
-        <!-- Estrutura para cada docente -->
-        <div class="docente w3-opacity w3-hover-opacity-off">
-            <img src="img/logo_docente1.png" alt="Foto do Docente">
-            <div class="info-docente">
+        <div class="w3-content w3-display-container ">
+          <!-- Docente 1 -->
+          <div class="mySlides">
+            <div style="display: flex;">
+              <img class="slides" src="img/logo_docente1.png"
+                alt="docente 1" style="width: 30%; height: auto; margin-right: 20px;">
+              <div class="informação-docente">
                 <h3>Chloe Elizabeth Price</h3>
                 <h4>Formação Acadêmica:</h4>
                 <p>Graduada em Tecnologia em Processamento de Dados pela Faculdade de São Paulo (2004)</p>
@@ -160,33 +164,72 @@
                 <h4>Atuação Profissional:</h4>
                 <p>Professora Titular da Faculdade Federal de Educação de Maringá</p>
                 <p>Experiência na área de Educação</p>
+              </div>
             </div>
-        </div>
-        <div class="docente w3-opacity w3-hover-opacity-off">
-            <img src="img/logo_docente2.png" alt="Foto do Docente">
-            <div class="info-docente">
-                <h3>Chloe Elizabeth Price</h3>
+          </div>
+  
+          <!-- Docente 2 -->
+          <div class="mySlides">
+            <div style="display: flex;">
+              <img class="slides" src="img/logo_docente2.png"
+                alt="docente 2" style="width: 30%; height: auto; margin-right: 20px;">
+              <div class="informação-docente">
+                <h3>Letícia Muniz</h3>
+                <h4>Formação Acadêmica:</h4>
+                <p>Graduada em Tecnologia em Processamento de Dados pela Faculdade do Rio de Janeiro (2006)</p>
+                <p>Mestre em Computação pelo Centro Universitário de São Luiz (2016)</p>
+                <h4>Atuação Profissional:</h4>
+                <p>Professora Titular da Faculdade Estadual de Educação do Rio de Janeiro</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Docente 3 -->
+          <div class="mySlides">
+            <div style="display: flex;">
+              <img class="slides" src="img/logo_docente3.png"
+                alt="docente 3" style="width: 30%; height: auto; margin-right: 20px;">
+              <div class="informação-docente">
+                <h3>Camila Locatelli</h3>
                 <h4>Formação Acadêmica:</h4>
                 <p>Graduada em Tecnologia em Processamento de Dados pela Faculdade de São Paulo (2004)</p>
                 <p>Mestre em Computação pelo Centro Universitário de São Luiz (2016)</p>
                 <h4>Atuação Profissional:</h4>
                 <p>Professora Titular da Faculdade Federal de Educação de Maringá</p>
                 <p>Experiência na área de Educação</p>
+              </div>
             </div>
+          </div>
+  
+          <!-- Botões de navegação -->
+          <button class="w3-button w3-white w3-display-left" onclick="plusDivs(-1)">❮</button>
+          <button class="w3-button w3-white w3-display-right" onclick="plusDivs(1)">❯</button>
         </div>
-        <div class="docente w3-opacity w3-hover-opacity-off">
-            <img src="img/logo_docente3.png" alt="Foto do Docente">
-            <div class="info-docente">
-                <h3>Chloe Elizabeth Price</h3>
-                <h4>Formação Acadêmica:</h4>
-                <p>Graduada em Tecnologia em Processamento de Dados pela Faculdade de São Paulo (2004)</p>
-                <p>Mestre em Computação pelo Centro Universitário de São Luiz (2016)</p>
-                <h4>Atuação Profissional:</h4>
-                <p>Professora Titular da Faculdade Federal de Educação de Maringá</p>
-                <p>Experiência na área de Educação</p>
-            </div>
-        </div>
-    </div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = x.length;
+    }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
+}
+</script>
+
     <div class="w3-padding-64 w3-content w3-" id="mercado">
         <h2 class="w3-text-white">Mercado de Trabalho</h2>
         <hr style="width:200px" class="w3-opacity">
@@ -241,15 +284,15 @@
             <a href="https://www.w3.org/html/" target="_blank">
             <img src="img/html5.png" alt="HTML" style="width: 100px; height: 100px; margin: 1.5%;" class="w3-opacity w3-hover-opacity-off"></a>
             <a href="https://www.w3.org/Style/CSS/" target="_blank">
-            <img src="img/CSS3.png" alt="CSS" style="width: 87px; height: 100px; margin: 1.5%;" class="w3-opacity w3-hover-opacity-off"></a>
+            <img src="img/css3.png" alt="CSS" style="width: 87px; height: 100px; margin: 1.5%;" class="w3-opacity w3-hover-opacity-off"></a>
             <a href="https://www.php.net" target="_blank">
             <img src="img/php.png" alt="PHP" style="width: 150px; height: 100px; margin: 1.5%;" class="w3-opacity w3-hover-opacity-off"></a>
             <a href="https://learn.microsoft.com/pt-br/dotnet/csharp/" target="_blank">
-            <img src="img/csharp.png" alt="C-SHARP" style="width: 18%;" class="w3-opacity w3-hover-opacity-off"></a>
+            <img src="img/Csharp.png" alt="C-SHARP" style="width: 18%;" class="w3-opacity w3-hover-opacity-off"></a>
             <a href="https://docs.oracle.com/en/database/oracle/oracle-database/index.html" target="_blank">
             <img src="img/sql.png" alt="SQL" style="width: 110px; height: 80px; margin: 1.5%;" class="w3-opacity w3-hover-opacity-off"></a>
             <a href="https://docs.oracle.com/en/java/" target="_blank">
-            <img src="img/java.png" alt="JAVA" style="width: 100px; height: 100px; margin: 1.5%;" class="w3-opacity w3-hover-opacity-off"></a>
+            <img src="img/Java.png" alt="JAVA" style="width: 100px; height: 100px; margin: 1.5%;" class="w3-opacity w3-hover-opacity-off"></a>
             </a>
         </div>
     </div>

@@ -18,6 +18,7 @@ body, html {
     overflow-y: hidden; 
 }
 
+
 /*Estilização da sidebar*/
 .fixed-sidebar {
     position: fixed;
@@ -67,34 +68,6 @@ a {
 
 .forms{
     font-size: 2em;
-}
-
-#docentes {
-    padding: 40px;
-}
-
-.docente {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.docente img {
-    width: 38%; 
-    height: auto;
-    margin-right: 20px;
-}
-
-.info-docente h3 {
-    margin: 0;
-    font-size: 2em;
-    color: white; 
-    font-weight: bold;
-}
-
-.info-docente p, h4 {
-    margin: 5px 0;
-    color: white; 
 }
 
 ::-webkit-scrollbar { /*rolagem scroll invisivel*/
